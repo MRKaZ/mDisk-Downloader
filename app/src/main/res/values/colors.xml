@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FAFAFA</color>
+    <color name="colorPrimaryDark">#E1E1E1</color>
+    <color name="colorSecondaryVariant">#2970B5</color>
+    <color name="colorSecondary">#9FCBF3</color>
+    <color name="colorSecondaryLight">#AFD7FB</color>
+    <color name="colorSecondaryDark">#73BCFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray">#FAFAFA</color>
+    <color name="grayDark">#EAEAEA</color>
+
+    <color name="transparent">#00000000</color>
+</resources>

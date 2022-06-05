@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">mDisk Downloader</string>
+
+    <!-- TODO Fragment dashboard -->
+    <string name="txt_title">mDisk Downloader</string>
+    <string name="txt_description">Simple video downloader for mdisk.me</string>
+    <string name="et_url_hint">Paste url here…</string>
+    <string name="btn_download">Download</string>
+
+    <string name="please_add_valid_url">Please paste valid url.</string>
+    <string name="clipboard_empty_message">Clipboard empty!.</string>
+    <string name="please_add_url">Please add url.</string>
+
+    <!-- TODO Fragment downloads-->
+    <string name="txt_empty_downloads">Empty downloads. :(</string>
+    <string name="txt_ok">OK</string>
+    <string name="txt_note">Note</string>
+    <string name="player_note">Following mdisk video\'s only playable with <font color='#9FCBF3'>MX Player</font> <font color='#9FCBF3'>MX Player Pro app</font>. Idk why!?. Also duration of the video displaying on the video item its not actual duration. That different!.</string>
+
+    <string name="refreshed_toast">Refreshed.</string>
+    <string name="permission_need_to_allow_access_storage">Permission need to allow access your storage.</string>
+
+    <!-- TODO Fragment settings-->
+    <!-- &lt;br /&gt; -->
+    <string name="built_with"><br>- <b>Kotlin</b> <b>(Language)</b>\n</br><br>- Android Architecture Components <b>(MVVM)</b>\n</br>
+        <br> • LiveData\n</br>
+        <br> • ViewModel\n</br>
+        <br> • Coroutines\n</br><br>- Retrofit\n</br><br>- Apache commons\n</br><br>- PermissionX <font color='#9FCBF3'><i>(com.guolindev.permissionx)</i></font>\n</br><br>- Gson\n</br><br>- Animated Bottom Bar <font color='#9FCBF3'><i>(nl.joery.animatedbottombar)</i></font>\n</br><br>- Material Components for Android\n</br><br>- Glide</br>
+    </string>
+    <string name="mrkaz">\@MRKaZ</string>
+    <string name="todo">TODO</string>
+    <string name="txt_general">General</string>
+    <string name="txt_downloads">Downloads</string>
+    <string name="txt_github">Github</string>
+    <string name="txt_github_profile">Github profile</string>
+    <string name="txt_source">Source</string>
+    <string name="txt_download_src">You can the source from here.</string>
+    <string name="txt_app">App</string>
+    <string name="txt_version">Version</string>
+    <string name="txt_version_placeholder">x.xxxx</string>
+    <string name="txt_package_placeholder">xxx.xxxx.xxxx</string>
+    <string name="txt_package">Package</string>
+    <string name="txt_built_with">Built with</string>
+
+    <!-- TODO Content descriptions -->
+    <string name="content_logo">Logo</string>
+    <string name="content_rocket">Rocket</string>
+    <string name="content_paste_url">Paste url</string>
+    <string name="content_download">Download</string>
+    <string name="content_info">Info</string>
+    <string name="content_folder">Folder</string>
+    <string name="content_author">Author</string>
+    <string name="content_github">Github</string>
+    <string name="content_src">Src</string>
+    <string name="content_version">Version</string>
+    <string name="content_package">Package</string>
+    <string name="content_built_with">Built with</string>
+    <string name="content_video_preview">Video preview</string>
+
+    <!-- TODO Bottom sheet details -->
+    <string name="txt_title_bottom">Title</string>
+    <string name="txt_size_bottom">Size</string>
+    <string name="txt_duration_bottom">Duration</string>
+    <string name="txt_info">Info</string>
+    <string name="txt_resolution">Resolution</string>
+    <string name="txt_author">Author</string>
+    <string name="txt_copy_link">Copy link</string>
+    <string name="txt_download">Download</string>
+
+    <string name="download_started_toast">Download started. </string>
+    <string name="file_already_exists_toast">File already exists!. </string>
+    <string name="please_allow_permission_toast">Please allow permission.</string>
+    <string name="link_copied_toast">Link copied.</string>
+
+    <!-- TODO Dialog loading-->
+    <string name="dialog_txt_loading">Loading…</string>
+
+    <!-- TODO Bottom Bar menu -->
+    <string name="item_bottom_menu_dashboard">Dashboard</string>
+    <string name="item_bottom_menu_downloads">Downloads</string>
+    <string name="item_bottom_menu_settings">Settings</string>
+
+    <!-- TODO Downloads Adapter -->
+    <string name="dialog_play">Play</string>
+    <string name="dialog_delete">Delete</string>
+    <string name="dialog_choose">Choose an action</string>
+    <string name="deleted_toast"> Deleted.</string>
+    <string name="delete_failed_toast">Delete failed.</string>
+    <string name="permission_need_message_adapter">Permission need to perform this action.</string>
+    <string name="mx_player_install_message">Please kindly install MX Player or Pro.</string>
+
+    <!-- TODO Download manager -->
+    <string name="dm_failed_toast">Delete failed. </string>
+    <string name="dm_complete_toast">Download complete!. </string>
+    <string name="downloading">Downloading</string>
+
+    <!-- TODO Permission utils -->
+    <string name="permission_utils_main_message">Core fundamental are based on these permissions.</string>
+    <string name="permission_utils_dialog_ok">OK</string>
+    <string name="permission_utils_dialog_cancel">Cancel</string>
+    <string name="permission_utils_message">You need to allow necessary permissions in Settings manually</string>
+    <string name="permission_utils_denied_message">These permissions are denied: </string>
+
+    <!-- TODO Utils -->
+    <string name="time_hours" translatable="false">%1$s Hours &amp;&#160;</string>
+    <string name="time_minutes" translatable="false">%1$s Minutes &amp;&#160;</string>
+    <string name="time_seconds" translatable="false">%1$s Seconds</string>
+
+</resources>

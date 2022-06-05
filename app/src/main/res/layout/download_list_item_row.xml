@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:foreground="@drawable/ripple_effect_card"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <ProgressBar
+                android:id="@+id/pbLoader"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/content_video_preview"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/imgThumb"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/content_video_preview"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMainTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/google_sans_medium"
+                android:maxLines="2"
+                android:minLines="2"
+                android:text="@string/txt_title_bottom"
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtMainSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/google_sans_thin"
+                android:gravity="start"
+                android:text="@string/txt_size_bottom"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtMainDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/google_sans_thin"
+                android:gravity="start"
+                android:text="@string/txt_duration_bottom"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
