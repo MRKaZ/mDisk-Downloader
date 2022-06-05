@@ -47,6 +47,7 @@
 ## Credits
 - [Animated Bottom Bar](https://github.com/Droppers/AnimatedBottomBar) - A customizable and easy to use BottomBar navigation view with sleek animations
 - [PermissionX](https://github.com/guolindev/PermissionX) - For request android runtime permission
+- [Rocket .GIF](https://dribbble.com/shots/2200411-Rocket) - Rocket animation
 
 ## License
 ##### Distributed under the Apache License. See [`LICENSE`](https://github.com/MRKaZ/mDisk-Downloader/blob/master/LICENSE) for more information.
