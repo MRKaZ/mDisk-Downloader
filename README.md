@@ -31,7 +31,7 @@
 
 <h2 align="center">Snapshots</h2>
 <div align="center">
-	<img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/assets/snap_1.png" width="250"> <img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/assets/snap_2.png" width="250"> <img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/assets/snap_3.png" width="250"> 
+	<img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/assets/snap_1.png" width="220"> <img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/assets/snap_2.png" width="220"> <img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/assets/snap_3.png" width="220"> 
 </div>
   
 ## Built with
