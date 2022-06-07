@@ -24,6 +24,16 @@
 - Check downloaded files list.
 - Also can copy direct link to stream without download.
 
+#### Tested with
+- Android **S** 12 **(_SDK 31_)**
+- Android **R** 11 **(_SDK 30_)**
+- Android **Pie** 9 **(_SDK 28_)**
+
+You can test it with other SDK's. Also Bug reports always accept **_Report an issue or Pull me a Request to update the codes snippet_**
+
+#### Contact me through
+[![License](https://img.shields.io/static/v1?message=@Anubis9494&logo=telegram&labelColor=5c5c5c&color=1182c3&logoColor=white&style=for-the-badge)](https://t.me/Anubis9494)
+
 <h2 align="center">Preview</h2>
 <div align="center">
 	<img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/assets/Preview.gif">
