@@ -15,6 +15,8 @@
 
 ## Features
 - Clean, Simple & Beautiful UI.
+- Bypassed **DRM** Protection. (Digital Rights Management)
+- Please kindly read the **Note** under **Changelog** field.
 - Built with **KOTLIN** also Obedient to *(MVVM)* architecture.
 - Displaying file **Info** before download
   - *File size*
@@ -30,9 +32,6 @@
 - Android **Pie** 9 **(_SDK 28_)**
 
 You can test it with other SDK's. Also Bug reports always accept **_Report an issue or Pull me a Request to update the codes snippet_**
-
-#### Contact me through
-[![License](https://img.shields.io/static/v1?message=@Anubis9494&logo=telegram&labelColor=5c5c5c&color=1182c3&logoColor=white&style=for-the-badge)](https://t.me/Anubis9494)
 
 <h2 align="center">Preview</h2>
 <div align="center">
@@ -57,7 +56,39 @@ You can test it with other SDK's. Also Bug reports always accept **_Report an is
 ## Credits
 - [Animated Bottom Bar](https://github.com/Droppers/AnimatedBottomBar) - A customizable and easy to use BottomBar navigation view with sleek animations
 - [PermissionX](https://github.com/guolindev/PermissionX) - For request android runtime permission
+- [Youtube-DL](https://github.com/yausername/youtubedl-android) - Youtube downloader.
 - [Rocket .GIF](https://dribbble.com/shots/2200411-Rocket) - Rocket animation
+
+**All libraries' credits go to their respective owners (developers).**
+
+## Changelog
+```
+[v1.1] [03/10/2022]
++ Bypassed DRM Protection. (Digital Rights Management)
++ Integrated Kotlin DSL. (Groovy to Kotlin DSL)
++ Added foreground service to perform downloads background.
+- Removed some functions and features.
+• [Dependencies]
++ Added youtubedl-android (youtube-dl) dependency. To bypass the DRM protection. (https://github.com/yausername/youtubedl-android)
+
+[MRKaZ] [Taprobana (LK)]
+
+[v1.0] [06/07/2022]
+
++ First release!.
++ Simple video downloader from mdisk.me
+
+[MRKaZ] [Taprobana (LK)]
+```
+
+## Note
+* Some of video files cannot bypass the DRM (Digital Rights Management).
+* Some of files are not downloadable. (Download disabled by the file author)
+* Also some files are sharing disabled by the file author.
+* About the download speed (Bandwidth) its depend on your internet connection and data traffic.
+
+**[DON't ASK OR PULL ISSUE's ABOUT THESE ERROR's]**
+
 
 ## License
 ##### Distributed under the Apache License. See [`LICENSE`](https://github.com/MRKaZ/mDisk-Downloader/blob/master/LICENSE) for more information.
