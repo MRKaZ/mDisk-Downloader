@@ -14,14 +14,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.google.android.material.button.MaterialButton
 import com.mrkazofficial.mdiskdownloader.R
 import com.mrkazofficial.mdiskdownloader.adapters.DownloadListAdapter
 import com.mrkazofficial.mdiskdownloader.utils.Constants
@@ -29,8 +27,7 @@ import com.mrkazofficial.mdiskdownloader.utils.Constants.LOCAL_BROADCAST_DOWNLOA
 import com.mrkazofficial.mdiskdownloader.utils.Constants.LOCAL_BROADCAST_DOWNLOAD_FILES_LIST_EVENT_KEY
 import com.mrkazofficial.mdiskdownloader.utils.PermissionUtils.grantPermissions
 import com.mrkazofficial.mdiskdownloader.utils.PermissionUtils.isPermissionGranted
-import com.mrkazofficial.mdiskdownloader.utils.SharedPreferenceUtils
-import com.mrkazofficial.mdiskdownloader.utils.SharedPreferenceUtils.save
+import com.mrkazofficial.mdiskdownloader.utils.Utils.toColor
 import kotlinx.coroutines.launch
 import java.io.File
 
@@ -54,8 +51,6 @@ class DownloadsFragment : Fragment() {
         swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout)
         layoutEmpty = view.findViewById(R.id.layoutEmpty)
 
-        val cvNote = view.findViewById<CardView>(R.id.cvNote)
-
         val rvDownloadList = view.findViewById<RecyclerView>(R.id.rvDownloadList)
 
         layoutEmpty.apply {
@@ -63,7 +58,7 @@ class DownloadsFragment : Fragment() {
         }
 
         swipeRefreshLayout.apply {
-            setColorSchemeColors(mActivity.getColor(R.color.colorSecondaryLight))
+            setColorSchemeColors(mActivity.toColor(color = R.color.colorSecondaryLight))
         }
 
         rvDownloadList.apply {
@@ -117,15 +112,6 @@ class DownloadsFragment : Fragment() {
                 getString(R.string.permission_need_to_allow_access_storage),
                 Toast.LENGTH_SHORT
             ).show()
-        }
-
-        cvNote.visibility = if (SharedPreferenceUtils.isHidden) View.GONE else View.VISIBLE
-
-        view.findViewById<MaterialButton>(R.id.btnHideNote).setOnClickListener {
-            cvNote.apply {
-                visibility = View.GONE
-            }
-            true.save()
         }
 
         return view

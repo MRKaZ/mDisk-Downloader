@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/79dc2ffed5242e4b91f8d9126f3d64e5/transformed/jetified-library-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/79dc2ffed5242e4b91f8d9126f3d64e5/transformed/jetified-library-1.1.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/79dc2ffed5242e4b91f8d9126f3d64e5/transformed/jetified-library-1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/26f7f35ef01481484254bd78b27793e0/transformed/library-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/26f7f35ef01481484254bd78b27793e0/transformed/library-1.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/26f7f35ef01481484254bd78b27793e0/transformed/library-1.1.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nl.joery.animatedbottombar/library/1.1.0/6b3e9630ecc4e8aa0e142fd8ee630b5b8157aa7c/library-1.1.0-javadoc.jar!/" />

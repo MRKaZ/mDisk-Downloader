@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <!-- Need to setup queries for Android 11 or above -->
     <queries>
@@ -17,12 +18,10 @@
         android:name=".App"
         android:allowBackup="true"
         android:banner="@drawable/ic_logo_mdisk_transparent"
-        android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:preserveLegacyExternalStorage="true"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:largeHeap="true"
@@ -30,7 +29,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MDiskDownloader"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="29">
         <activity
             android:name=".activities.MainActivity"
             android:exported="true">
@@ -50,6 +49,23 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+
+        <!-- Notification receive handling tasks -->
+        <receiver
+            android:name=".receivers.NotificationReceiver"
+            android:exported="false"
+            android:label="Notification Receiver" >
+            <intent-filter>
+                <action android:name="LOCAL_BROADCAST_SERVICE_WORKER"/>
+            </intent-filter>
+        </receiver>
+        <!-- Downloader service (foreground) -->
+        <service
+            android:name=".services.DownloaderService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="Downloader Service" />
     </application>
+
 
 </manifest>

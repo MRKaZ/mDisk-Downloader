@@ -25,7 +25,7 @@
     <string name="built_with"><br>- <b>Kotlin</b> <b>(Language)</b>\n</br><br>- Android Architecture Components <b>(MVVM)</b>\n</br>
         <br> • LiveData\n</br>
         <br> • ViewModel\n</br>
-        <br> • Coroutines\n</br><br>- Retrofit\n</br><br>- Apache commons\n</br><br>- PermissionX <font color='#9FCBF3'><i>(com.guolindev.permissionx)</i></font>\n</br><br>- Gson\n</br><br>- Animated Bottom Bar <font color='#9FCBF3'><i>(nl.joery.animatedbottombar)</i></font>\n</br><br>- Material Components for Android\n</br><br>- Glide</br>
+        <br> • Coroutines\n</br><br>- Retrofit\n</br><br>- Apache commons\n</br><br>- PermissionX <font color='#9FCBF3'><i>(com.guolindev.permissionx)</i></font>\n</br><br>- Gson\n</br><br>- Animated Bottom Bar <font color='#9FCBF3'><i>(nl.joery.animatedbottombar)</i></font>\n</br><br>- Material Components for Android\n</br><br>- Glide\n</br><br>- youtubedl-android <font color='#9FCBF3'><i>(com.yausername.youtubedl_android)</i></font>\n</br>
     </string>
     <string name="mrkaz">\@MRKaZ</string>
     <string name="todo">TODO</string>
@@ -34,13 +34,15 @@
     <string name="txt_github">Github</string>
     <string name="txt_github_profile">Github profile</string>
     <string name="txt_source">Source</string>
-    <string name="txt_download_src">You can the source from here.</string>
+    <string name="txt_download_src">You can find the source from here.</string>
     <string name="txt_app">App</string>
     <string name="txt_version">Version</string>
     <string name="txt_version_placeholder">x.xxxx</string>
     <string name="txt_package_placeholder">xxx.xxxx.xxxx</string>
     <string name="txt_package">Package</string>
     <string name="txt_built_with">Built with</string>
+    <string name="txt_digital_rights_management_drm">Digital Rights Management (DRM)</string>
+    <string name="sw_txt_bypass_drm_protection">Bypass DRM protection.</string>
 
     <!-- TODO Content descriptions -->
     <string name="content_logo">Logo</string>
@@ -70,7 +72,7 @@
     <string name="download_started_toast">Download started. </string>
     <string name="file_already_exists_toast">File already exists!. </string>
     <string name="please_allow_permission_toast">Please allow permission.</string>
-    <string name="link_copied_toast">Link copied.</string>
+    <string name="link_copied_toast">Link copied. But, its not drm bypassed url.</string>
 
     <!-- TODO Dialog loading-->
     <string name="dialog_txt_loading">Loading…</string>

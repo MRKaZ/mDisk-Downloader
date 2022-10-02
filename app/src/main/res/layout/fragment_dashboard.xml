@@ -10,6 +10,7 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="75dp"
+        android:padding="5dp"
         android:layout_height="75dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
@@ -24,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_title"
                 android:textColor="@color/colorSecondaryDark"
-                android:textSize="24sp"
+                android:textSize="23sp"
                 />
 
             <TextView
@@ -52,7 +53,7 @@
                 android:fontFamily="@font/google_sans_thin"
                 android:text="@string/txt_description"
                 android:textColor="@color/colorSecondaryLight"
-                android:textSize="15sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -61,6 +62,7 @@
     <ImageView
         android:id="@+id/imgRocket"
         android:layout_width="0dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout2"
         android:layout_height="170dp"
         android:layout_marginStart="95dp"
         android:layout_marginTop="20dp"
@@ -127,7 +129,7 @@
                     android:singleLine="true"
                     android:textColor="@color/colorSecondaryDark"
                     android:textColorHint="@color/colorSecondaryDark"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
             </LinearLayout>
 

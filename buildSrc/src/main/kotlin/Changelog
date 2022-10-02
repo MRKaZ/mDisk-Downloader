@@ -1,0 +1,23 @@
+[v1.1] [03/10/2022]
++ Bypassed DRM Protection. (Digital Rights Management)
++ Integrated Kotlin DSL. (Groovy to Kotlin DSL)
++ Added foreground service to perform downloads background.
+- Removed some functions and features.
+• [Dependencies]
++ Added youtubedl-android (youtube-dl) dependency. To bypass the DRM protection. (https://github.com/yausername/youtubedl-android)
+
+• [NOTE]
+* Some of video files cannot bypass the DRM (Digital Rights Management).
+* Some of files are not downloadable. (Download disabled by the file author)
+* Also some files are sharing disabled by the file author.
+* About the download speed (Bandwidth) its depend on your internet connection and data traffic.
+[DON't ASK OR PULL ISSUE's ABOUT THESE ERROR's]
+
+[MRKaZ] [Taprobana (LK)]
+
+[v1.0] [06/07/2022]
+
++ First release!.
++ Simple video downloader from mdisk.me
+
+[MRKaZ] [Taprobana (LK)]

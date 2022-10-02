@@ -11,6 +11,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="gray">#FAFAFA</color>
+    <color name="grayMed">#ACACAC</color>
     <color name="grayDark">#EAEAEA</color>
 
     <color name="transparent">#00000000</color>

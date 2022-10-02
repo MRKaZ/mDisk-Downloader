@@ -1,17 +1,23 @@
 package com.mrkazofficial.mdiskdownloader.utils
 
+import android.app.ActivityManager
+import android.app.PendingIntent
 import android.content.*
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.media.MediaMetadataRetriever
 import android.media.MediaMetadataRetriever.METADATA_KEY_DURATION
 import android.net.Uri
+import android.os.Build
+import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.mrkazofficial.mdiskdownloader.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
 import kotlin.math.pow
+import kotlin.reflect.KClass
 
 
 /**
@@ -24,6 +30,24 @@ import kotlin.math.pow
  */
 
 object Utils {
+
+    fun pendingIntentFlags() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+    } else {
+        PendingIntent.FLAG_UPDATE_CURRENT
+    }
+
+    @Suppress("DEPRECATION")
+    fun checkIfServiceIsRunning(context: Context, serviceClass: KClass<*>) = with(context) {
+        val manager: ActivityManager =
+            getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        for (service in manager.getRunningServices(Int.MAX_VALUE)) {
+            if (serviceClass.qualifiedName == service.service.className) {
+                return@with true
+            }
+        }
+        return@with false
+    }
 
     val String.videoId: String
         get() = this.substringAfterLast("/")
@@ -105,7 +129,7 @@ object Utils {
         }
 
     val String.replaceIllegalCharacters: String
-        get() = this.replace("[^A-Za-z0-9 ]".toRegex(), ".")
+        get() = this.replace("[^A-Za-z0-9 ]".toRegex(), " ").replace("  ", " ")
 
     fun openFromViaTelegram(context: Context, userId: String): Intent {
         val intent: Intent? = try {
@@ -119,24 +143,6 @@ object Utils {
             Intent(Intent.ACTION_VIEW, Uri.parse("http://www.telegram.me/$userId"))
         }
         return intent!!
-    }
-
-    suspend fun retrieveVideoFrameFromVideo(url: String?): Bitmap? {
-        var bitmap: Bitmap? = null
-        withContext(Dispatchers.IO) {
-            var mediaMetadataRetriever: MediaMetadataRetriever? = null
-            try {
-                if (mediaMetadataRetriever == null)
-                    mediaMetadataRetriever = MediaMetadataRetriever()
-                mediaMetadataRetriever.setDataSource(url, HashMap<String, String>())
-                bitmap = mediaMetadataRetriever.frameAtTime
-            } catch (e: Exception) {
-                e.printStackTrace()
-            } finally {
-                mediaMetadataRetriever?.release()
-            }
-        }
-        return bitmap
     }
 
     fun File.retrieveFileDuration(context: Context): Long {
@@ -161,5 +167,12 @@ object Utils {
         gitIntent.action = Intent.ACTION_VIEW
         gitIntent.data = Uri.parse("https://github.com/MRKaZ/mDisk-Downloader")
         this.startActivity(gitIntent)
+    }
+
+    fun Context.toColor(@ColorRes color: Int): Int {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            this.getColor(color)
+        else
+            ContextCompat.getColor(this, color)
     }
 }

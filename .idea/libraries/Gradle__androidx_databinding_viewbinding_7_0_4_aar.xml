@@ -5,6 +5,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74fb68efd56137d7b121e0b54af69870/transformed/jetified-viewbinding-7.0.4/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/74fb68efd56137d7b121e0b54af69870/transformed/jetified-viewbinding-7.0.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74fb68efd56137d7b121e0b54af69870/transformed/jetified-viewbinding-7.0.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/32ead280bc44622e2b30a3225aa75899/transformed/viewbinding-7.0.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bf157cb4fc363bad275ad0547cdecb76/transformed/viewbinding-7.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bf157cb4fc363bad275ad0547cdecb76/transformed/viewbinding-7.0.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

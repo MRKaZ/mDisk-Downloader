@@ -90,26 +90,9 @@ object DownloadManager {
                     query.setFilterById(downloadId)
                     val cursor = downloadManager.query(query)
                     cursor.moveToFirst()
-                    val totalBytes =
-                        cursor.getLong(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES))
-                    val bytesDownloaded =
-                        if (totalBytes > 0) cursor.getInt(
-                            cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR)
-                        ) else -1
-                    val totalSize =
-                        cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES))
                     if (cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)) == DownloadManager.STATUS_SUCCESSFUL) {
                         downloading = false
                     }
-                    val size = Formatter.formatFileSize(context, totalSize.toLong())
-                    val downloaded = Formatter.formatFileSize(context, bytesDownloaded.toLong())
-                    val progress = (bytesDownloaded * 100L / totalSize).toInt()
-                    val status: String = cursor.getStatus
-
-                    //Log.e(TAG, "downloadFile: progress $progress")
-                    //Log.e(TAG, "downloadFile: status $status")
-                    //Log.e(TAG, "downloadFile: size $size")
-                    //Log.e(TAG, "downloadFile: downloaded $downloaded")
                     cursor.close()
                 }
             }

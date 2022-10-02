@@ -38,8 +38,6 @@ import java.io.File
  * @Copyright (c) 2022 MRKaZ. All rights reserved.
  */
 
-private const val TAG = "DownloadListAdapter"
-
 @SuppressLint("NotifyDataSetChanged")
 internal class DownloadListAdapter :
     RecyclerView.Adapter<DownloadListAdapter.DownloadListAdapterHolder>() {
@@ -97,7 +95,8 @@ internal class DownloadListAdapter :
                 .setItems(items) { _, which ->
                     when (items[which]) {
                         mContext.getString(R.string.dialog_play) -> {
-                            openMXPlayer(position = position)
+                            //openMXPlayer(position = position)
+                            openPlayer(position = position)
                         }
                         mContext.getString(R.string.dialog_delete) -> {
                             try {
@@ -165,6 +164,15 @@ internal class DownloadListAdapter :
         val imgThumb: ImageView = view.findViewById(R.id.imgThumb)
     }
 
+    private fun openPlayer(position: Int) {
+        val intentMxPro = Intent(Intent.ACTION_VIEW)
+        intentMxPro.setDataAndType(
+            Uri.parse(this.fileList[position].absolutePath),
+            "video/*"
+        )
+        mContext.startActivity(intentMxPro)
+    }
+
     private fun openMXPlayer(position: Int) {
         /** MX Player Package's
          * com.mxtech.videoplayer.pro - Pro Edition
@@ -197,6 +205,7 @@ internal class DownloadListAdapter :
         ).show()
     }
 
+    @Suppress("DEPRECATION")
     private fun deleteFile(context: Context, file: File): Boolean {
         val where = MediaStore.MediaColumns.DATA + "=?"
         val selectionArgs = arrayOf(

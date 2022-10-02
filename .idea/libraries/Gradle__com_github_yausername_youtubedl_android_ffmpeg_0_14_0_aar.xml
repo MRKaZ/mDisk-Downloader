@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.yausername.youtubedl-android:ffmpeg:0.14.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/890cd6dec4e06873f6c6453825b49b69/transformed/ffmpeg-0.14.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/890cd6dec4e06873f6c6453825b49b69/transformed/ffmpeg-0.14.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/890cd6dec4e06873f6c6453825b49b69/transformed/ffmpeg-0.14.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.yausername.youtubedl-android/ffmpeg/0.14.0/df1d2735586af998bb6f1563aa524019d31d90b/ffmpeg-0.14.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -22,6 +21,10 @@ import com.mrkazofficial.mdiskdownloader.dialogs.DialogLoading
 import com.mrkazofficial.mdiskdownloader.utils.Utils
 import com.mrkazofficial.mdiskdownloader.utils.Utils.videoId
 import com.mrkazofficial.mdiskdownloader.viewmodels.VideoDataViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 
 
@@ -76,21 +79,60 @@ class DashboardFragment : Fragment() {
                 if (etUrl.text.isNotEmpty()) {
                     val url = etUrl.text.toString()
                     viewModel.viewModelScope.launch {
-                        loadingDialog.show()
-                        viewModel.videoData.observe(viewLifecycleOwner) {
-                            if (it != null) {
-                                val bottomDetails = BottomSheetDetails()
-                                bottomDetails.videoDataModel = it
-                                bottomDetails.show(
-                                    (mActivity as AppCompatActivity).supportFragmentManager,
-                                    null
-                                )
-                                etUrl.text.clear()
+                        viewModel.doLoadVideoDataAsFlow(videoId = url.videoId)
+                            .flowOn(Dispatchers.IO)
+                            .catch {
+                                if (it.localizedMessage == "Sharing cancelled") {
+                                    Toast.makeText(
+                                        requireContext(),
+                                        "This file is not downloadable or download disabled by the file author.",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
                             }
-                            loadingDialog.dismiss()
-                        }
+                            .collectLatest {
+                                if (it != null) {
+                                    if (!it.source.endsWith(".mpd")) {
+                                        Toast.makeText(
+                                            mActivity,
+                                            "This file cannot bypass the DRM protection.",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
+                                    val bottomDetails = BottomSheetDetails()
+                                    bottomDetails.videoDataModel = it
+                                    bottomDetails.show(
+                                        requireActivity().supportFragmentManager,
+                                        null
+                                    )
+                                    etUrl.text.clear()
+                                }
+                                loadingDialog.dismiss()
+                            }
                     }
-                    viewModel.getVideoData(videoId = url.videoId)
+//                    viewModel.viewModelScope.launch {
+//                        loadingDialog.show()
+//                        viewModel.videoData.observe(viewLifecycleOwner) {
+//                            if (it != null) {
+//                                if (!it.source.endsWith(".mpd")){
+//                                    Toast.makeText(
+//                                        mActivity,
+//                                        "This file cannot bypass the DRM protection.",
+//                                        Toast.LENGTH_SHORT
+//                                    ).show()
+//                                }
+//                                val bottomDetails = BottomSheetDetails()
+//                                bottomDetails.videoDataModel = it
+//                                bottomDetails.show(
+//                                    requireActivity().supportFragmentManager,
+//                                    null
+//                                )
+//                                etUrl.text.clear()
+//                            }
+//                            loadingDialog.dismiss()
+//                        }
+//                    }
+                    //viewModel.getVideoData(videoId = url.videoId)
                 }
             }
 
