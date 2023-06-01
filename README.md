@@ -1,3 +1,7 @@
+## ⚠ Deprecated
+#### Cause the main website does not exist, So you may know the role. This app does not work properly! Thank you for your under-standing.
+##
+
 <!-- PROJECT LOGO -->
 <div align="center">
 	<img src="https://github.com/MRKaZ/mDisk-Downloader/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="120">
